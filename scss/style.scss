@@ -1,8 +1,13 @@
+@import "mixin.scss";
+@import "vars.scss";
+@import "fonts.scss";
+
 body{
     margin: 0;
-    height: 100%;
-    width: 100%;
-    
+    -webkit-font-smoothing: antialiased;
+    font-size: 24px;
+    color:$main-color;
+    @include Ar();
 }
 
 html,body{
@@ -31,8 +36,43 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-wrapper{
-    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
+.main-inner{
+    overflow: hidden;
+}
+
+// Grid
+
+@import "grid.scss";
+
+// Ibg
+
+@import "ibg.scss";
+
+// Block_content
+
+@import "block_content.scss";
+
+// Burger
+
+@import "burger.scss";
+
 // Blocks
+
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/studio";
+@import "blocks/credo";
+@import "blocks/developers";
+@import "blocks/portfolio";
+@import "blocks/adaptive";
+@import "blocks/trade";
+@import "blocks/care";
+@import "blocks/contacts";
+@import "blocks/footer";
 

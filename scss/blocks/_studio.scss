@@ -1,0 +1,186 @@
+.studio {
+    padding: 150px 0 100px;
+    background: $main-color;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 200px;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        color: $title-color;
+        @include helB;
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 760px;
+    }
+
+    &__suptitle {
+        font-size: 340px;
+        color: rgba(193, 193, 193, 0.3);
+        font-weight: 700;
+        @include Tah;
+        text-transform: uppercase;
+        position: absolute;
+        right: 330px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    &__description {
+        font-size: 20px;
+        color: #585858;
+        @include Ar;
+        line-height: 30px;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__footer {
+        display: flex;
+        margin: 0 -15px;
+    }
+
+    &__column {
+        flex: 0 1 33.33333%;
+        padding: 0 15px;
+    }
+
+    &-item {
+        transition: background 0.2s linear;
+        padding: 15px 20px;
+
+        &:hover {
+            background: #f6ae48;
+            .studio-item__iccon {
+                fill: $main-color;
+            }
+            .studio-item__title,
+            .studio-item__description {
+                color: $main-color;
+            }
+        }
+        &__iccon {
+            width: 35px;
+            height: 35px;
+            fill: #00b9e7;
+
+            transition: fill 0.2s linear;
+        }
+
+        &__title {
+            font-size: 20px;
+            color: $title-color;
+            @include Ar;
+            font-weight: 700;
+            margin: 10px 0;
+            transition: color 0.2s linear;
+            display: block;
+        }
+
+        &__description {
+            font-size: 15px;
+            color: $title-color;
+            transition: color 0.2s linear;
+            @include Ar;
+            line-height: 25px;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__btn {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 18px;
+            color: $main-color;
+            text-align: center;
+            border: 2px solid $main-color;
+            padding: 5px 10px;
+            @include muB;
+            font-weight: normal;
+            letter-spacing: 1px;
+            transition: background .2s linear,border-color .2s linear;
+            &:hover{
+                background:#000;
+                border-color: #000;
+            }
+        }
+
+        &__arrow {
+            width: 17px;
+            height: 17px;
+            fill: $main-color;
+        }
+    }
+    @media(max-width:1024px){
+        &__content{
+            padding-left: 50px;
+        }
+    }
+    @media(max-width:990px){
+        padding: 75px 0 25px;
+        &__suptitle{
+            right:0px;
+        }
+        &__header{
+            margin-bottom: 75px;
+        }
+        &__footer{
+            flex-wrap: wrap;
+        }
+        &__column{
+            flex: 0 1 50%;
+            &:last-child{
+                margin-top: 25px;
+            }
+        }
+    }
+    @media(max-width:767px){
+        padding: 45px 0 25px;
+        &__header{
+            margin-bottom: 35px;
+        }
+        &__title{
+            font-size: 35px;
+        }
+        &__footer{
+            
+        }
+        &__column{
+            flex:0 1 100%;
+            max-width:500px;
+            margin:0 auto 25px;
+            &:last-child{
+                margin-top: 0;
+            }
+        }
+    }
+    @media(max-width:575px){
+        &__header{
+            flex-direction: column;
+        }
+        &__content{
+            padding-left: 0;
+        }
+        &__suptitle{
+            font-size: 250px;
+        }
+    }
+    @media(max-width:400px){
+        &__suptitle{
+            font-size: 200px;
+        }
+    }
+}

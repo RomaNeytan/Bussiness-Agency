@@ -1,0 +1,200 @@
+.portfolio {
+    &-header {
+        padding: 45px 0;
+        background: #303263;
+        position: relative;
+        text-align: center;
+        &__title {
+            position: absolute;
+            top:45%;
+            left:50%;
+            transform: translate3d(-50%,-50%,0);
+            z-index: 1;
+            text-transform: uppercase;
+            font-size: 97px;
+            color:#8c8da3;
+            font-weight: 700;
+            @include Tah();
+        }
+
+        &__suptitle {
+            font-size: 36px;
+            color:$main-color;
+            @include Par();
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 5;
+        }
+    }
+    &-item {
+        position: relative;
+        height: 100%;
+        padding-bottom: 57%;
+
+        &:after{
+            content: " ";
+            display: block;
+            width: 0;
+            height: 100%;
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: 5;
+            background:rgba(247,187,101,.6);
+            transition: width .7s linear;
+        }
+
+        &:hover{
+            .portfolio-item__content{
+                display: block;
+            }
+            &:after{
+                width:100%;
+            }
+        }
+        &_sm{
+            padding-bottom: 85%;
+        }
+        &__img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        &__content{
+            position: absolute;
+            top:50%;
+            left:50%;
+            z-index: 10;
+            transform: translate3d(-50%,-50%,0);
+            display: none;
+            text-align: center;
+        }
+        &__title{
+            font-weight: 600;
+            color:$main-color;
+            @include Ex2();
+            text-transform: uppercase;
+            display: block;
+            font-size: 72px;
+        }
+        &__suptitle{
+            color:$main-color;
+            @include Ex2();
+            display: block;
+            font-size: 30px;
+        }
+    }
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__column {
+        flex:0 1 25%;
+        &_b {
+            flex:1 0 50%;
+        }
+    }
+
+    &__footer {
+        padding: 45px 0;
+        background: #303263;
+        text-align: center;
+    }
+
+    &__btn {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+        color:$main-color;
+        @include Ex2();
+        text-transform: uppercase;
+        border-radius: 15px;
+        background: #6a6b8e;
+        padding: 15px 25px;
+        transition: color .2s linear,background .2s linear;
+
+        &:hover{
+            color:#6a8b8e;
+            background: #1d2211;
+        }
+    }
+    @media(max-width:1337px){
+        &-header{
+            &__title{
+                font-size: 71px;
+            }
+            &__suptitle{
+                font-size: 31px;
+            }
+        }
+    }
+    @media(max-width:991px){
+        &-header{
+            &__title{
+                font-size: 55px;
+            }
+            &__suptitle{
+                font-size: 24px;
+            }
+        }
+    }
+    @media(max-width:767px){
+        padding: 25px 0;
+        &-header{
+            &__title{
+                font-size: 41px;
+            }
+            &__suptitle{
+                font-size: 17px;
+            }
+        }
+        &-item{
+            &__title{
+                font-size: 48px;
+            }
+            &__suptitle{
+                font-size: 25px;
+            }
+        }
+        &__footer{
+            padding: 25px 0;
+        }
+        &__btn{
+            font-size: 19px;
+        }
+    }
+    @media(max-width:575px){
+        &-header{
+            &__title{
+                font-size: 27px;
+            }
+            &__suptitle{
+                font-size: 20px;
+            }
+        }
+    
+        &__column{
+            &_sm{
+                flex:0 1 50%;
+            }
+        }
+    }
+    @media(max-width:390px){
+        &__column{
+            flex:0 1 100%;
+        }
+    }
+    @media(max-width:372px){
+        &-header{
+            &__title{
+                font-size: 23px;
+            }
+        }
+    }
+}

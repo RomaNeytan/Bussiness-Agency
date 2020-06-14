@@ -1,0 +1,51 @@
+.menu {
+    padding: 35px 0;
+    background: $main-color;
+    border-bottom: 1px solid #adadad;
+
+    .container{
+        position: relative;
+    }
+
+    &-menu {
+        display: flex;
+        justify-content: flex-end;
+        &__item {
+            & + &{
+                margin-left: 25px;
+            }
+        }
+
+        &__link {
+            font-size: 30px;
+            color:$title-color;
+            @include futB;
+            font-weight: normal;
+            transition: color .2s linear;
+
+            &.active{
+                color:#f6ae48;
+            }
+
+            &:hover{
+                color:#f6ae48;
+            }
+        }
+    }
+
+    @media (max-width:767px){
+        .nav{
+            display: none;
+        }
+        .nav.active{
+            display: block;
+
+            .menu-menu{
+                flex-direction: column;
+                .menu-menu__item + .menu-menu__item{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

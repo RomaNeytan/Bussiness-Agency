@@ -1,0 +1,31 @@
+.care {
+    padding: 120px 0 140px;
+    background: $main-color;
+    
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+    }
+    @media(max-width:991px){
+        padding: 0 0 20px;
+        &__row{
+            flex-direction: column;
+        }
+        &__img{
+            order: 1;
+        }
+    }
+    @media(max-width:991px){
+        &__img{
+            img{
+                max-width:100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}

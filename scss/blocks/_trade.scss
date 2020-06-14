@@ -1,0 +1,154 @@
+.traide {
+    padding: 65px 0 45px;
+    background: url("../../images/traide/traide_bg.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 15;
+    &:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.52);
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+    }
+
+    &-header {
+        margin-bottom: 40px;
+        text-align: center;
+        &__title {
+            font-size: 48px;
+            color:$main-color;
+            text-transform: uppercase;
+            @include uniS();
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -25px;
+    }
+
+    &__column {
+        padding: 0 25px;
+        flex:0 1 33.33333%;
+    }
+    &-item {
+        &__header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 7px;
+        }
+
+        &__img {
+            margin-right: 15px;
+        }
+
+        &__iccon {
+            width: 55px;
+            height: 55px;
+            fill:#00b9e7;
+            transition: fill .2s linear;
+
+            &:hover{
+                fill:#e700b9;
+            }
+        }
+
+        &__title {
+            font-size: 30px;
+            color:$main-color;
+            @include Par();
+        }
+
+        &__description {
+            font-size: 18px;
+            color:$main-color;
+            @include Ar();
+            line-height: 30px;
+        }
+    }
+
+    &__btn {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    &__button {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        height: 60px;
+        max-width:330px;
+        padding: 0 20px;
+        font-size: 24px;
+        margin: 0 auto;
+        color:$main-color;
+        text-transform: uppercase;
+        @include Par();
+        background: #f6ae48;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: background .2s linear,color .2s linear;
+
+        &:hover{
+            background: #48f6df;
+            color:#f6487d;
+        }
+    }
+    @media(max-width:991px){
+        &-header{
+            &__title{
+                font-size: 32px;
+            }
+        }
+        &-item{
+            &__title{
+                font-size: 23px;
+            }
+            &__iccon{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &__row{
+            flex-wrap: wrap;
+        }
+        &__column{
+            flex:0 1 50%;
+        }
+    }
+    @media(max-width:767px){
+        padding: 40px 0;
+        &__column{
+            flex:0 1 100%;
+        }
+        &-item{
+            text-align: center;
+            margin: 0 auto;
+            max-width:600px;
+            &__header{
+                justify-content: center;
+            }
+        }
+        &-header{
+            margin-bottom: 20px;
+        }
+    }
+    @media(max-width:575px){
+        &-item{
+            max-width:none;
+        }
+        &__button{
+            font-size: 18px;
+            height: 45px;
+            max-width:255px;
+        }
+    }
+}
