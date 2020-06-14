@@ -5,8 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agency</title>
+    <!-- Meta -->
+    <meta name = "description" content = "Разработка Landing Page">
+    <meta name = "keywords" content = "Agency,Developers,Studio,Works,Projects">
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <!-- Svg -->
@@ -288,7 +299,7 @@
 <body>
     <div class="main-wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" id = "header">
             <div class="header__inner">
                 <h1 class="header__title">Наши сайты заставляют работать ваш бизнес.</h1>
                 <div class="header__description">
@@ -324,26 +335,26 @@
             </div>
         </header>
         <!-- Nav -->
-        <div class="menu">
+        <div class="menu" id = "menu_fixed">
             <div class="container">
-                <nav class="nav">
+                <nav class="nav" id = "nav">
                     <ul class="menu-menu">
-                        <li class="menu-menu__item"><a href="#" class="menu-menu__link">Главная</a></li>
-                        <li class="menu-menu__item"><a href="#" class="menu-menu__link">О нас</a></li>
-                        <li class="menu-menu__item"><a href="#" class="menu-menu__link">Услуги</a></li>
-                        <li class="menu-menu__item"><a href="#" class="menu-menu__link">Наши работы</a></li>
-                        <li class="menu-menu__item"><a href="#" class="menu-menu__link">Контакты</a></li>
+                        <li class="menu-menu__item" data-scroll = "#header"><a href="#" class="menu-menu__link">Главная</a></li>
+                        <li class="menu-menu__item" data-scroll = "#studio"><a href="#" class="menu-menu__link">О нас</a></li>
+                        <li class="menu-menu__item" data-scroll = "#developers"><a href="#" class="menu-menu__link">Услуги</a></li>
+                        <li class="menu-menu__item" data-scroll = "#portfolio"><a href="#" class="menu-menu__link">Наши работы</a></li>
+                        <li class="menu-menu__item" data-scroll = "#contacts"><a href="#" class="menu-menu__link">Контакты</a></li>
                     </ul>
                 </nav>
                 <!-- Burger -->
-                <button class="nav-toggle">
+                <button class="nav-toggle" id = "burger">
                     <span class="nav-toggle__item">Menu</span>
                 </button>
             </div>
         </div>
         <!-- Studio -->
         <main class = "main-inner">
-            <section class="studio">
+            <section class="studio" id = "studio">
                 <div class="container">
                     <div class="studio__header">
                         <h4 class="studio__title">Студия</h4>
@@ -466,7 +477,7 @@
                 </div>
             </section>
             <!-- Developers -->
-            <section class="developers">
+            <section class="developers" id = "developers">
                 <div class="container">
                     <div class="developers__header">
                         <div class="developers-rectangle">
@@ -557,7 +568,7 @@
                 </div>
             </section>
             <!-- Portfolio -->
-            <section class="portfolio">
+            <section class="portfolio" id = "portfolio">
                 <div class="portfolio-header">
                     <h1 class="portfolio-header__title">Our projects</h1>
                     <h4 class="portfolio-header__suptitle">Последние проекты</h4>
@@ -782,7 +793,7 @@
                 </div>
             </section>
             <!-- Contacts -->
-            <section class="contacts">
+            <section class="contacts" id = "contacts">
                 <div class="container">
                     <div class="contacts__inner">
                         <div class="contacts__content">

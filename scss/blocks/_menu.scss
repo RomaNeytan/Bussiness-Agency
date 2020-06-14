@@ -3,6 +3,23 @@
     background: $main-color;
     border-bottom: 1px solid #adadad;
 
+    &.fixed{
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index: 1000;
+        transform: translate3d(0,0,0);
+        width: 100%;
+        background: rgb(49, 82, 189);
+        border-bottom: 0;
+        padding: 15px 0;
+
+        @media(max-width:767px){
+            padding: 25px 0;
+        }
+    }
+
     .container{
         position: relative;
     }
