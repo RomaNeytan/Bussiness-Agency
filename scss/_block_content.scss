@@ -50,9 +50,7 @@
             }
         }
     }
-    @media only screen
-    and (min-device-width : 768px)
-    and (max-device-width : 1024px) {
+    @media(min-device-width : 768px) and (max-device-width : 1024px) {
         &.block-content_care{
             .block-content__title{
                 font-size: 52px;
